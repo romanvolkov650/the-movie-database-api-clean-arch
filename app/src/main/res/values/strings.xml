@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">The Movie</string>
+    <string name="no_internet_connection">Нет интернет соединения</string>
+    <string name="update">Обновить</string>
+    <string name="rating">Пользовательский рейтинг</string>
+    <string name="play_trailer">Воспроизвести трейлер</string>
+    <string name="review">Обзор</string>
+    <string name="n_a">NA</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable-v24/bg_bottom_sheet_dialog_fragment.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable-v24/bg_toast.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable-v24/ic_internet.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable-v24/view_progress_bar_metal.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/bg_grey_border_5dp.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/circle_shape.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/circle_shape_external.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/circular_progress_bar.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/ic_internet.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/ic_logo.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/ic_progress_bar_metal.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/drawable/view_progress_bar_metal.xml" value="0.314" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/font/lato.xml" value="0.3411458333333333" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/activity_main.xml" value="0.55" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/activity_movie.xml" value="0.33" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/fragment_movie_details.xml" value="0.67" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/item_movie.xml" value="0.5" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/item_pagination.xml" value="0.3109375" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/toast_layout.xml" value="0.3109375" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/view_button_update.xml" value="0.5" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/view_fill_progress.xml" value="3.0" />
+        <entry key="..\:/workspace/TheMovie/app/src/main/res/layout/view_placeholder.xml" value="0.3109375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

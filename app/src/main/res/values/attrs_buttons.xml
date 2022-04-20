@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--экран заглушки-->
+    <declare-styleable name="PlaceholderView">
+        <attr name="isShowButton" format="boolean" />
+        <attr name="textTitlePlaceholder" format="reference" />
+        <attr name="textButtonPlaceholder" format="reference" />
+        <attr name="imagePlaceholder" format="reference" />
+    </declare-styleable>
+
+    <!--кнопка с прелоадером и рамкой-->
+    <declare-styleable name="RetryButton">
+        <attr name="borderColorResButton" format="reference" />
+        <attr name="textResButton" format="reference" />
+        <attr name="textColorResButton" format="reference" />
+    </declare-styleable>
+
+    <!--круглая вьюха заполнености в процентах-->
+    <declare-styleable name="FillProgressView">
+        <attr name="percentVal" format="integer" />
+    </declare-styleable>
+</resources>

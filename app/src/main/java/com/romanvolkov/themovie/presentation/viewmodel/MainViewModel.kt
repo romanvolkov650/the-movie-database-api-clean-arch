@@ -11,14 +11,17 @@ import com.romanvolkov.themovie.core.common.LiveDataNotNull
 import com.romanvolkov.themovie.domain.interactor.MovieInteractor
 import com.romanvolkov.themovie.presentation.model.MovieState
 import com.romanvolkov.themovie.presentation.model.PopularState
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
+import javax.inject.Inject
 
-class MainViewModel : DispatchViewModel() {
-
-    private val movieInteractor = MovieInteractor.Base()
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val movieInteractor: MovieInteractor
+) : DispatchViewModel() {
 
     val state = LiveDataNotNull(PopularState())
     val movieDetailState = LiveDataNotNull(MovieState())
@@ -107,7 +110,8 @@ class MainViewModel : DispatchViewModel() {
     private suspend fun getTrailer(movieId: Int) {
         movieInteractor.getMovieTrailer(movieId, onSuccess = {
             viewModelScope.launch {
-                val res = it.results.sortedBy { it.official }.firstOrNull { it.site == SITE_YOUTUBE }
+                val res =
+                    it.results.sortedBy { it.official }.firstOrNull { it.site == SITE_YOUTUBE }
                 res?.let {
                     movieDetailState.value = movieDetailState.value.copy(
                         trailerUrl = YOUTUBE_VIDEO_URL + res.key

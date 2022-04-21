@@ -1,10 +1,10 @@
 package com.romanvolkov.themovie.domain.interactor
 
-import com.romanvolkov.themovie.core.App
 import com.romanvolkov.themovie.domain.model.Movie
 import com.romanvolkov.themovie.domain.model.PopularResponse
 import com.romanvolkov.themovie.domain.model.Videos
-import splitties.init.appCtx
+import com.romanvolkov.themovie.domain.repository.MovieRepository
+import javax.inject.Inject
 
 interface MovieInteractor {
     suspend fun getPopular(
@@ -25,8 +25,7 @@ interface MovieInteractor {
         onSuccess: (Videos) -> Unit
     )
 
-    class Base : MovieInteractor {
-        private val repository = (appCtx as App).getMovieRepository()
+    class Base @Inject constructor(private val repository: MovieRepository) : MovieInteractor {
 
         override suspend fun getPopular(
             page: Int,

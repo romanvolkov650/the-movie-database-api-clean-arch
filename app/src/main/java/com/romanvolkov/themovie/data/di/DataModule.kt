@@ -7,9 +7,12 @@ import com.romanvolkov.themovie.core.common.Constants.BASE_URL
 import com.romanvolkov.themovie.core.common.Constants.DEFAULT_LANGUAGE
 import com.romanvolkov.themovie.data.api.MovieApi
 import com.romanvolkov.themovie.data.repository.MovieRepositoryImpl
+import com.romanvolkov.themovie.domain.interactor.MovieInteractor
 import com.romanvolkov.themovie.domain.repository.MovieRepository
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -20,17 +23,27 @@ import java.io.IOException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import javax.inject.Singleton
 import javax.net.ssl.SSLHandshakeException
 
 @Module
+@InstallIn(SingletonComponent::class)
 class DataModule {
 
     @Provides
+    @Singleton
+    fun provideMovieInteractor(repository: MovieRepository): MovieInteractor {
+        return MovieInteractor.Base(repository)
+    }
+
+    @Provides
+    @Singleton
     fun provideRepository(api: MovieApi): MovieRepository {
         return MovieRepositoryImpl(api)
     }
 
     @Provides
+    @Singleton
     fun provideMovieApi(okHttpClient: OkHttpClient): MovieApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -41,6 +54,7 @@ class DataModule {
     }
 
     @Provides
+    @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         val logging by lazy {
             HttpLoggingInterceptor { Timber.tag("OkHttp").d(it) }.apply {

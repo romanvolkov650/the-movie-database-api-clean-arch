@@ -22,7 +22,9 @@ import com.romanvolkov.themovie.presentation.viewmodel.MainViewModel
 import com.romanvolkov.themovie.presentation.viewmodel.MovieActions
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDispose
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MovieActivity : AppCompatActivity() {
 
     private val model: MainViewModel by viewModels()
